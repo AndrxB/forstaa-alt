@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import ExtraInfo from "./ExtraInfo";
+import ExtraInfo from "../components/ExtraInfo";
 
 function ExtraInfoButton() {
     const [visibility, setVisibility] = useState(false);
 
     const toggleVisibility = () => {
-        setVisibility(!visibility); // Toggle visibility
+        setVisibility(!visibility);
     }
 
     return (

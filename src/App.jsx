@@ -3,7 +3,7 @@ import './App.css'
 import Mainbody from './components/mainbody'
 import AboutMe from './components/AboutMe'
 import Title from './components/Title'
-import ExtraInfoButton from './components/ExtraInfoButton'
+import ExtraInfoButton from './hooks/ExtraInfoButton'
 
 
 
@@ -16,7 +16,7 @@ function App() {
       <header><Title /></header>
       <section><Mainbody /></section>
 
-      <ExtraInfoButton />
+      <section><ExtraInfoButton /></section>
       <footer><AboutMe /></footer>
     </>
   )

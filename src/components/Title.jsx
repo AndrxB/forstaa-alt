@@ -8,16 +8,12 @@ class Title extends Component {
 
     render() {
         return(
-            <>
-            
+            <p className="Title">
                 <h1>[insert name here]</h1>
-
-
-                <nav>
-                    læs mere
+                <nav className="Navbar">
                     <Recommendations />
                 </nav>
-            </>
+            </p>
         )
     }
 } 
