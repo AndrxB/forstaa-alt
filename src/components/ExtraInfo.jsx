@@ -1,16 +1,15 @@
 import React, {Component} from "react";
 
 class ExtraInfo extends Component {
+    visible = true
     constructor(){
         super()
     }
 
     render(){
         return(
-            
             <div className="ExtraInfo-container">
-                <h3>Læs mere her</h3>
-                Hvordan foregår det?
+                <h3>Hvordan foregår det?</h3>
                 <p>
                     Jo, man finder en tekst der ikke er for svær og ikke for let, og ordbøger der passer til ens niveau, og 
                     så når

@@ -1,21 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Mainbody from './components/mainbody'
-import KontaktMig from './components/KontaktMig'
-import ExtraInfo from './components/ExtraInfo'
+import AboutMe from './components/AboutMe'
+import Title from './components/Title'
+import ExtraInfoButton from './components/ExtraInfoButton'
+
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+    // <p><ExtraInfo /></p>
     <>
-      <h1>[insert name here]</h1>
-      <Mainbody />
-      <KontaktMig />
-      <ExtraInfo />
+      <header><Title /></header>
+      <section><Mainbody /></section>
+
+      <ExtraInfoButton />
+      <footer><AboutMe /></footer>
     </>
   )
 }

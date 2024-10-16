@@ -1,42 +1,45 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-.card {
-  padding: 2em;
+[class*="-container"] {
+  padding: 20px;
+  background-color: #00000006;
 }
 
-.read-the-docs {
-  color: #888;
+.title-name {
+  font-size: 50px;
+}
+
+.title-container {
+  top: 0; /* Fixes the container at the top of the page */
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  margin-left: 0px;
+  justify-content: center; /* Centers the title horizontally */
+  align-items: center; /* Centers the title vertically within the container */
+  height: 120px; /* Define the height to ensure the content is centered vertically */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+header {
+  background-color: #00000028;
+  position: sticky;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+section {
+  background-color: #00000028;
+  width: 100%;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
 }
