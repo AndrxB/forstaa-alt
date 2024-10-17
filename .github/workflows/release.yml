@@ -34,6 +34,7 @@ jobs:
           else
             echo "version_type=none" >> $GITHUB_ENV
 
+
       # Step 2: Run npm version to bump the correct version
       - name: Bump version
         if: env.version_type != 'none'
