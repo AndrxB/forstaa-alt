@@ -60,6 +60,6 @@ jobs:
         with:
             tag_name: ${{ env.latest_tag }}  # Use the latest tag here
             files: |
-              ./dist/*
+              .react-build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
