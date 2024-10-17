@@ -43,7 +43,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: build  # Ensure it runs after the build job
 
+    
+
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetch all history, including tags
+    
     # Step 1: Download the artifacts from the build job
     - name: Download build artifacts
       uses: actions/download-artifact@v3
