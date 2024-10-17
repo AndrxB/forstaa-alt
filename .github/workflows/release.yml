@@ -34,7 +34,6 @@ jobs:
           else
             echo "version_type=none" >> $GITHUB_ENV
 
-
       # Step 2: Run npm version to bump the correct version
       - name: Bump version
         if: env.version_type != 'none'
@@ -56,8 +55,7 @@ jobs:
       # Step 4: Push the updated version and README.md back to the repo
       - name: Push changes
         if: env.version_type != 'none'
-        run: |
-          git push origin HEAD
+        run: git push origin HEAD
 
   release:
     runs-on: ubuntu-latest
