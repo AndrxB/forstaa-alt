@@ -55,4 +55,4 @@ jobs:
         with:
           tag_name: ${{ env.latest_tag }}  # Use the latest tag here
           files: |
-                ./dist/**  # Include everything in the downloaded dist folder
+                dist/**  # Include everything in the downloaded dist folder
