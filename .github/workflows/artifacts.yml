@@ -33,14 +33,14 @@ jobs:
 
       # Step 5: Compress the build folder into a ZIP file
       - name: Compress build folder to ZIP
-        run: zip -r ./dist.zip ./dist
+        run: zip -r ./website.zip ./dist ./README.md
 
       # Step 6: Upload the ZIP file as an artifact
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
           name: School-Website  # Match this name in the release job
-          path: ./dist.zip
+          path: ./website.zip
       
   release:
     runs-on: ubuntu-latest
@@ -78,6 +78,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.latest_tag }}  # Use the latest tag here
-          files: ./dist.zip  # Attach the ZIP file to the release
+          files: ./website.zip  # Attach the ZIP file to the release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
