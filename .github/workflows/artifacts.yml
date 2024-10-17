@@ -39,14 +39,15 @@ jobs:
           name: react-build
           path: dist/*
       
-      # Step 6: get latest tag
+      # Step 6: Get latest tag
       - name: Get latest tag
         id: get_tag
         run: |
-            git fetch --tags
-            LATEST_TAG=$(git describe --tags --abbrev=0)
-            echo "Latest tag is: $LATEST_TAG"
-            echo "latest_tag=$LATEST_TAG" >> $GITHUB_ENV
+          git fetch --tags
+          LATEST_TAG=$(git describe --tags --abbrev=0 || echo "No tags found")
+          echo "Latest tag is: $LATEST_TAG"
+          echo "latest_tag=$LATEST_TAG" >> $GITHUB_ENV  # Store it as an environment variable
+    
 
       - name: Create GitHub Release
         id: create_release
