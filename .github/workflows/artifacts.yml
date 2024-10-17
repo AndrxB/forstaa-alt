@@ -1,4 +1,4 @@
-name: Build and Release React App
+name: Release artifact
 
 on:
   workflow_run:
