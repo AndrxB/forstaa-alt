@@ -65,4 +65,19 @@ jobs:
         id: get_tag
         run: |
           git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0 || echo "
+          LATEST_TAG=$(git describe --tags --abbrev=0 || echo "No tags found")
+          echo "latest_tag=$LATEST_TAG" >> $GITHUB_ENV
+
+      # Step 4: List the contents of the directory for debugging purposes
+      - name: List directory contents
+        run: ls -R .
+
+      # Step 5: Create a GitHub release and attach the ZIP file
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.latest_tag }}  # Use the latest tag here
+          files: ./dist.zip  # Attach the ZIP file to the release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
