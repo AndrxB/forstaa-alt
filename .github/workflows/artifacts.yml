@@ -36,11 +36,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: react-build
-          path: dist
-
-      # Debug the directory structure
-      - name: Debug dir
-        run: ls -R
+          path: dist/**
 
       # Step 6: Get latest tag
       - name: Get latest tag
