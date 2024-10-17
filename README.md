@@ -4,7 +4,7 @@
 [Repository](https://github.com/AndrxB/School-Website)
 [Releases](https://github.com/AndrxB/School-Website/releases)
 
-Version: v0.2.21
+Version: v0.3.0
 
 # How-to-use guide:
 ___
