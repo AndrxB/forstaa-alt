@@ -2,4 +2,4 @@
 > Authered by: André Birk
 > Start-date: 15.10.2024
 
-Version: 0.2.19
+Version: v0.2.21
