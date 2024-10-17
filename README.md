@@ -15,6 +15,8 @@ ___
 
 *When that is done proceed to step 2, this can be done in the same terminal*
 
+___
+
 ##### 2. Run a server
 2.1 Go to the folder - type `$ cd $HOME/Downloads/website`
 2.2 type `$ http-server dist/`
