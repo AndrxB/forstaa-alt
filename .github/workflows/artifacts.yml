@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: react-build
-          path: dist/**
+          path: ./dist/**
 
       # Step 6: Get latest tag
       - name: Get latest tag
@@ -48,6 +48,10 @@ jobs:
           LATEST_TAG=$(git describe --tags --abbrev=0 || echo "No tags found")
           echo "Latest tag is: $LATEST_TAG"
           echo "latest_tag=$LATEST_TAG" >> $GITHUB_ENV  # Store it as an environment variable
+      
+      # debug dir
+      - name: debug dir
+        run: ls -R
 
       - name: Create GitHub Release
         id: create_release
@@ -55,4 +59,4 @@ jobs:
         with:
           tag_name: ${{ env.latest_tag }}  # Use the latest tag here
           files: |
-                dist/**  # Include everything in the downloaded dist folder
+                ./dist/**  # Include everything in the downloaded dist folder
