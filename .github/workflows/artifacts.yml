@@ -17,11 +17,11 @@ jobs:
         with:
           fetch-depth: 0  # Fetch all history, including tags
 
-      # Step 2: Set up Node.js (specify the version you need)
+      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'  # Use the Node.js version your project requires
+          node-version: '20.x'
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -31,49 +31,38 @@ jobs:
       - name: Build the React app
         run: npm run build
 
-      # Step 5: Upload build artifacts
-      - name: Upload build artifacts
+      # Step 5: Compress the build folder into a ZIP file
+      - name: Compress build folder to ZIP
+        run: zip -r ./dist.zip ./dist
+
+      # Step 6: Upload the ZIP file as an artifact
+      - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
-          name: react-build
-          path: ./dist/**
-      
+          name: School-Website  # Match this name in the release job
+          path: ./dist.zip
       
   release:
     runs-on: ubuntu-latest
     needs: build  # Ensure it runs after the build job
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # Fetch all history, including tags
-    
-    # Step 1: Download the artifacts from the build job
-    - name: Download build artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: react-build  # Name of the artifact uploaded in the build job
-        path: ./dist  # Download the artifact to this path
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history, including tags
 
-    # Step 2: Get latest tag
-    - name: Get latest tag
-      id: get_tag
-      run: |
-        git fetch --tags
-        LATEST_TAG=$(git describe --tags --abbrev=0 || echo "No tags found")
-        echo "latest_tag=$LATEST_TAG" >> $GITHUB_ENV
-    
-    - name: dir
-      run: ls -R ./dist
-    
-    # Step 3: Create GitHub Release using the downloaded dist folder
-    - name: Create GitHub Release
-      id: create_release
-      uses: softprops/action-gh-release@v2
-      with:
-        tag_name: ${{ env.latest_tag }}  # Use the latest tag here
-        files: |
-            ./dist/**  # Include all files in dist folder in the release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Step 2: Download the artifact uploaded in the build job
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: School-Website  # This matches the artifact name in the build job
+          path: ./  # Download to the current working directory
+
+      # Step 3: Get the latest Git tag
+      - name: Get latest tag
+        id: get_tag
+        run: |
+          git fetch --tags
+          LATEST_TAG=$(git describe --tags --abbrev=0 || echo "
