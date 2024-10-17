@@ -31,17 +31,17 @@ jobs:
       - name: Build the React app
         run: npm run build
 
-      # Debug the directory structure
-      - name: Debug dir
-        run: ls -R
-
       # Step 5: Upload build artifacts
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: react-build
           path: dist
-      
+
+      # Debug the directory structure
+      - name: Debug dir
+        run: ls -R
+
       # Step 6: Get latest tag
       - name: Get latest tag
         id: get_tag
