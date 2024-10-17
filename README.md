@@ -6,7 +6,7 @@
 
 - [Releases](https://github.com/AndrxB/School-Website/releases)
 
-Version: v0.3.1
+Version: v0.3.3
 
 # How-to-use guide:
 ___
