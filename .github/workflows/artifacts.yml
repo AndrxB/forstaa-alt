@@ -49,13 +49,10 @@ jobs:
           echo "Latest tag is: $LATEST_TAG"
           echo "latest_tag=$LATEST_TAG" >> $GITHUB_ENV  # Store it as an environment variable
 
-      # Step 7: Create GitHub Release
-      - name: Create GitHub Release
-        id: create_release
-        uses: softprops/action-gh-release@v2
-        with:
-            tag_name: ${{ env.latest_tag }}  # Use the latest tag here
-            files: |
-              .react-build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - name: Create GitHub Release
+          id: create_release
+          uses: softprops/action-gh-release@v2
+          with:
+              tag_name: ${{ env.latest_tag }}  # Use the latest tag here
+              files: |
+                ./dist/**  # Include everything in the downloaded dist folder
