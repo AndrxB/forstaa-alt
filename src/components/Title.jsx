@@ -1,5 +1,6 @@
 import React, {Comment, Component} from "react";
 import Recommendations from "./Recommendations";
+import AboutMe from "./AboutMe";
 
 class Title extends Component {
     constructor(){
@@ -9,10 +10,8 @@ class Title extends Component {
     render() {
         return(
             <p className="Title">
-                <h1>[insert name here]</h1>
-                <nav className="Navbar">
-                    <Recommendations />
-                </nav>
+                <h1>Forstå Alt</h1>
+                <nav><AboutMe/></nav>
             </p>
         )
     }

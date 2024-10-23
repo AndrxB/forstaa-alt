@@ -10,7 +10,7 @@ function ExtraInfoButton() {
 
     return (
         <div>
-            <button onClick={toggleVisibility}>Læs mere her</button>
+            <button onClick={toggleVisibility} className="readmore-button">Læs mere her</button>
             {visibility && <p><ExtraInfo/></p>}
         </div>
     );

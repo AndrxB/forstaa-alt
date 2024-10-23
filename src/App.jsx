@@ -4,20 +4,21 @@ import Mainbody from './components/Mainbody'
 import AboutMe from './components/AboutMe'
 import Title from './components/Title'
 import ExtraInfoButton from './hooks/ExtraInfoButton'
+import Recommendations from './components/Recommendations'
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (  
-    // <p><ExtraInfo /></p>
     <>
       <header><Title /></header>
-      <section><Mainbody /></section>
 
+      {/* Wrap the aside elements in a div for layout */}
+      <div className='asides-container'>
+        <aside className='left-aside'><Recommendations /></aside>
+        <aside className='right-aside'><Mainbody /></aside>
+      </div>
       <section><ExtraInfoButton /></section>
-      <footer><AboutMe /></footer>
     </>
   )
 }

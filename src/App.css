@@ -3,9 +3,8 @@
 }
 
 header {
-  background-color: #00000028;
-  width: 100%;
   background-color: #333;
+  width: 100%;
   padding: 10px;
   text-align: center;
   font-size: large;
@@ -17,15 +16,42 @@ header .Title {
   padding: 10px;
 }
 
-header .Navbar {
-  background-color: #575757a0;
-  position: sticky;
-}
-
 section {
-  background-color: #00000028;
-  width: 100%;
   background-color: #333;
+  width: 100%;
   padding: 20px;
   text-align: center;
+}
+
+/* Container that holds both aside elements */
+.asides-container {
+  display: flex;                 /* Ensures that asides are horizontally aligned */
+  justify-content: space-between; /* Space between the two asides */
+  padding: 1rem;
+}
+
+/* Styling for left and right asides */
+.left-aside, .right-aside {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Left aside takes 20% of the width */
+.left-aside {
+  background-color: blue;
+  flex-basis: 20%;                /* 20% width */
+  flex-grow: 0;
+  
+}
+
+/* Right aside takes 80% of the width */
+.right-aside {
+  background-color: blue;
+  flex-basis: 80%;                /* 80% width */
+  flex-grow: 1;
+}
+
+.readmore-button {
+  font-size: large;
+  font-weight: bold;
 }
