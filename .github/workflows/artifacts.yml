@@ -1,4 +1,4 @@
-name: Release artifact
+name: Upload artifact
 
 on:
   workflow_run:

@@ -2,7 +2,7 @@ name: Deploy via FTP
 
 on:
   workflow_run:
-    workflows: ["Build and Upload Artifact"]
+    workflows: ["Upload artifact"]
     types:
       - completed
 
