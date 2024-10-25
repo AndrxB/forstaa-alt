@@ -2,7 +2,7 @@ name: Deploy via FTP
 
 on:
   workflow_run:
-    workflows: ["Upload artifact"]
+    workflows: ["Bump Version and Create Release"]
     types:
       - completed
 
@@ -37,4 +37,4 @@ jobs:
           password: ${{ secrets.FTPPASSWORD }}
           protocol: ftps
           server-dir: www/  # Replace with your target directory on the server
-          local-dir: ./dist  # This tells it to upload the artifact files
+          local-dir: ./dist/  # This tells it to upload the artifact files
