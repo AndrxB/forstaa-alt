@@ -12,17 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout code (for reference)
         uses: actions/checkout@v3
 
-      # Step 2: Download the artifact uploaded in the Build workflow
-      - name: Download build artifact
-        uses: actions/download-artifact@v3
+        # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          name: School-Website  # Matches the artifact name from the previous workflow
-          path: ./  # Download to the current working directory
+          node-version: '20.x'
 
-      # Step 3: Sync files to FTP
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the React app
+      - name: Build the React app
+        run: npm run build
+
       - name: Sync files to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -31,4 +37,4 @@ jobs:
           password: ${{ secrets.FTPPASSWORD }}
           protocol: ftps
           server-dir: www  # Replace with your target directory on the server
-          local-dir: ./dist  # Path to the artifact content after extraction (adjust if necessary)
+          local-dir:   # This tells it to upload the artifact files
