@@ -9,10 +9,11 @@ class Title extends Component {
 
     render() {
         return(
-            <p className="Title">
-                <h1>Forstå Alt</h1>
-                <nav><AboutMe/></nav>
-            </p>
+            <>
+            <h1>Forstå Alt</h1>
+            </>
+                
+            
         )
     }
 } 

@@ -1,18 +1,24 @@
 import React from "react";
+import nudanskOrdbog from "../assets/nudansk_ordbog.png";
+import dinDanskeOrdbog from "../assets/din_danske_ordbog.png";
 
 function Books() {
-    const books = [
-        "Din danske ordbog",
-        "Politikkens Nudansk Ordbog med Etymologi"
-    ]
+    const books = [nudanskOrdbog, dinDanskeOrdbog];
 
     return (
-    <ul>
-        {books.map((element) => {return <button>{element}</button>})}
-    </ul>
-    )
-
-
+        <>
+            {books.map((src, index) => (
+                
+                <img 
+                    src={src} 
+                    alt={`Book ${index + 1}`} 
+                    width="200" 
+                    height="300"
+                />
+                
+            ))}
+        </>
+    );
 }
 
-export default Books
+export default Books;
