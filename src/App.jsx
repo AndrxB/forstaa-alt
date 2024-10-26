@@ -19,7 +19,7 @@ function App() {
         <aside className='right-aside'><Mainbody /></aside>
       </div>
       <section><ExtraInfoButton /></section>
-    </>
+    </> 
   )
 }
 
