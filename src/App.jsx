@@ -14,22 +14,21 @@ function App() {
           <Title />
           <nav><AboutMe/></nav>
         </header>
-      <div className="left-content-container"></div>
 
-      <div className="middle-content-container">
-        
+      <body className="main-content-container">
+        <div className="left-content-container" />
 
-        
-        <div className='asides-container'>
-          <aside className='left-aside'><Recommendations /></aside>
-          <aside className='right-aside'><Mainbody /></aside>
+        <div className="middle-content-container">        
+          <div className='asides-container'>
+            <aside className='left-aside'><Recommendations /></aside>
+            <aside className='right-aside'><Mainbody /></aside>
+          </div>
         </div>
+        <div className="right-content-container" />
+      </body>
 
-        
-        
-      </div>
       <section><ExtraInfoButton /></section>
-      <div className="right-content-container" />
+      
     </>  
   )
 }
