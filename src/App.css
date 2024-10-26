@@ -21,6 +21,16 @@ section {
   width: 100%;
   padding: 20px;
   text-align: center;
+  justify-content: space-between;
+}
+
+.right-content-container, .left-content-container, .middle-content-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-basis: 100/3%;
+  flex-grow: 1;
+
 }
 
 /* Container that holds both aside elements */
@@ -28,6 +38,7 @@ section {
   display: flex;                 /* Ensures that asides are horizontally aligned */
   justify-content: space-between; /* Space between the two asides */
   padding: 1rem;
+  flex-basis: 20%;
 }
 
 /* Styling for left and right asides */

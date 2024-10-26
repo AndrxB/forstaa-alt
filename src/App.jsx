@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Mainbody from './components/Mainbody'
 import AboutMe from './components/AboutMe'
@@ -9,17 +8,29 @@ import Recommendations from './components/Recommendations'
 
 
 function App() {
-  return (  
+  return (
     <>
-      <header><Title /></header>
+      <header>
+          <Title />
+          <nav><AboutMe/></nav>
+        </header>
+      <div className="left-content-container"></div>
 
-      {/* Wrap the aside elements in a div for layout */}
-      <div className='asides-container'>
-        <aside className='left-aside'><Recommendations /></aside>
-        <aside className='right-aside'><Mainbody /></aside>
+      <div className="middle-content-container">
+        
+
+        
+        <div className='asides-container'>
+          <aside className='left-aside'><Recommendations /></aside>
+          <aside className='right-aside'><Mainbody /></aside>
+        </div>
+
+        
+        
       </div>
       <section><ExtraInfoButton /></section>
-    </>
+      <div className="right-content-container" />
+    </>  
   )
 }
 
