@@ -2,7 +2,6 @@ import React from "react";
 import Mainbody from '../components/Mainbody'
 import Title from '../components/Title'
 import Recommendations from '../components/Recommendations'
-import RedirectButton from '../hooks/RedirectButton'
 
 function HomePage() {
     return (

@@ -41,12 +41,12 @@ section {
 }
 
 #hidden {
-  visibility: collapse;
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 720px) {
-  .left-content-container, .right-content-container {
-    display: none;
+  #hidden {
+    visibility: collapse;
   }
 
   .asides-container {
