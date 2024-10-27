@@ -1,9 +1,18 @@
 import React from "react";
+import Title from "../components/Title"
+import AboutMe from "../components/AboutMe"
 
 
 function AboutPage(){
     return(
-        <section>joe</section>
+        <>
+            <header>
+                <Title />
+            </header>
+
+            <AboutMe />
+        </>
+        
     )
 
 }

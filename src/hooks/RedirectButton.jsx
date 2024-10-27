@@ -5,7 +5,7 @@ function RedirectButton({ targetPage, text }) {
     const navigate = useNavigate()
 
     const handleRedirect = () => {
-        navigate(targetPage)
+        navigate(targetPage, { replace: true });
     }
 
     return (

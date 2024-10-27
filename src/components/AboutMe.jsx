@@ -8,11 +8,20 @@ class AboutMe extends Component {
     render() {
         return(
             <>
-                <nav>
-                    <button>Kontakt mig</button>
-                </nav>
-                <div>(Make button and redirect to other page)</div>
-                <h3>forstaa.alt@mail.com</h3>
+                <section>Hvem er jeg?</section>
+                <p>Indsæt tekst stykke her</p>
+
+                <section>
+                    <section>
+                       <p>Mail</p>
+                        <a href="mailto: forstaa.alt@mail.com">forstaa.alt@mail.com</a>
+                    </section>
+                        <p>Telefonnummer:</p>
+                        "Indsæt Telefonnummer"
+                    <section>
+
+                    </section>
+                </section>
 
                 Det tager normalt omkring 10 timer med 2 timers undervisning om ugen, 
                 og så bliver du bedre til at læse og forstå end selv de bedste lærere du nogensinde har haft.

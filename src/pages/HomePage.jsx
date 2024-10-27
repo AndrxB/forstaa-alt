@@ -1,7 +1,6 @@
 import React from "react";
 import Mainbody from '../components/Mainbody'
 import Title from '../components/Title'
-import ExtraInfoButton from '../hooks/ExtraInfoButton'
 import Recommendations from '../components/Recommendations'
 import RedirectButton from '../hooks/RedirectButton'
 
@@ -10,9 +9,6 @@ function HomePage() {
         <>
             <header>
                 <Title />
-                <nav>
-                    <RedirectButton targetPage="AboutPage" text="Om mig"/>
-                </nav>
             </header>
 
             <body className="main-content-container">
@@ -23,8 +19,6 @@ function HomePage() {
                         <aside className='left-aside'> <Mainbody /> </aside>
                         <aside className='right-aside'> <Recommendations /> </aside>
                     </section>
-
-                    <section><ExtraInfoButton /></section>
                 </section>
                 <section id="hidden" className="right-content-container" />
             </body>

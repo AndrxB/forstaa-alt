@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ExtraInfoButton from '../hooks/ExtraInfoButton'
 
 class Mainbody extends Component {
     constructor() {
@@ -16,6 +17,8 @@ class Mainbody extends Component {
                 Når man har fået dette at vide tilpas mange gange offentligt i klassen, så lærer man at ord og grammatik man ikke 
                 forstår, gør man ikke noget ved. Det er denne måde 50% af danskerne er blevet funktionelle analfabeter, desværre.
                 </p>
+
+                <section><ExtraInfoButton /></section>
             </>
             
         )

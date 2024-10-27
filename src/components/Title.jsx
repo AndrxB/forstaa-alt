@@ -1,6 +1,7 @@
 import React, {Comment, Component} from "react";
-import Recommendations from "./Recommendations";
-import AboutMe from "./AboutMe";
+import RedirectButton from "../hooks/RedirectButton"
+
+
 
 class Title extends Component {
     constructor(){
@@ -9,7 +10,14 @@ class Title extends Component {
 
     render() {
         return(
-            <h1>Forstå Alt</h1>
+            <section>
+                <h1>Forstå Alt</h1>
+                <nav>
+                    <RedirectButton targetPage="/" text="Hjem"/>
+                    <RedirectButton targetPage="/AboutPage" text="Om mig"/>
+                </nav>
+            </section>
+            
         )
     }
 } 

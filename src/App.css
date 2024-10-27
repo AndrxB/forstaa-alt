@@ -8,85 +8,83 @@ header {
   left: 0;
   width: 100%;
   background-color: #333;
-  z-index: 1000; /* Make sure the header stays above other elements */
+  z-index: 1000;
   text-align: center;
 }
 
-header nav{
+header nav {
   background-color: black;
   text-align: center;
 }
-
 
 section {
   background-color: #333;
   text-align: center;
 }
 
-.right-content-container, .left-content-container, .middle-content-container{
+.right-content-container, .left-content-container, .middle-content-container {
   padding: 1rem;
-  display: flexbox;
-  justify-content: space-between; /* Space between the two asides */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
-  flex-basis: 100/3%;
+  flex-basis: 100%;
   flex-grow: 0;
   padding: 3rem;
 }
 
 .main-content-container {
-  margin-top: 60px; /* Push content down by the height of the fixed header */
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-#hidden{
+#hidden {
   visibility: collapse;
 }
 
 @media only screen and (max-width: 720px) {
   .left-content-container, .right-content-container {
-    display: none; /* Hides these containers on small screens */
+    display: none;
   }
 
   .asides-container {
-    flex-direction: column;       /* Stack the asides vertically */
-    align-items: stretch;         /* Make asides take full width of the container */
+    flex-direction: column;
+    align-items: stretch;
     padding: 1rem;
-    flex-basis: 100%;             /* Full width */
+    flex-basis: 100%;
   }
 
   .left-aside, .right-aside {
-    flex-basis: auto;             /* Remove width constraints on small screens */
-    width: 100%;                  /* Take full width of the asides container */
+    flex-basis: auto;
+    width: 100%;
   }
 }
 
-
-/* Container that holds both aside elements */
 .asides-container {
-  display: flex;                 /* Ensures that asides are horizontally aligned */
-  justify-content: space-between; /* Space between the two asides */
+  display: flex;
+  justify-content: space-between;
   padding: 1rem;
-  flex-basis: 20%;
+  flex-basis: 100%;
+  flex-direction: row;
 }
 
-/* Styling for left and right asides */
 .left-aside, .right-aside {
   padding: 10px;
   box-sizing: border-box;
   border-radius: 10px;
 }
 
-/* Left aside takes 20% of the width */
 .right-aside {
   background-color: blue;
-  flex-basis: 20%;                /* 20% width */
+  flex-basis: 20%;
   flex-grow: 0;
-  
 }
 
-/* Right aside takes 80% of the width */
 .left-aside {
   background-color: blue;
-  flex-basis: 80%;                /* 80% width */
+  flex-basis: 80%;
   flex-grow: 1;
 }
 
