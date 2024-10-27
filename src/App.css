@@ -32,13 +32,15 @@ section {
   flex-grow: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .left-content-container, .right-content-container {
-    visibility: hidden;
+    visibility: none;
   }
 
-  .asides-container{
-    visibility: hidden;
+  .asides-container {
+    justify-content: space-between; /* Space between the two asides */
+    padding: 1rem;
+    flex-basis: 20%;
   }
 
 }

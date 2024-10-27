@@ -17,15 +17,21 @@ function App() {
 
       <body className="main-content-container">
         <div className="left-content-container" />
-        <div className="middle-content-container">        
-          <div className='asides-container'>
-            <aside className='left-aside'><Recommendations /></aside>
-            <aside className='right-aside'><Mainbody /></aside>
+        <div className="middle-content-container">  
+
+          <div className="asides-container">
+            <aside className='left-aside'>
+              <Recommendations />
+            </aside>
+            
+            <aside className='right-aside'>
+              <Mainbody />
+            </aside>
           </div>
+        
         </div>
         <div className="right-content-container" />
       </body>
-
       <section><ExtraInfoButton /></section>
       
     </>  
