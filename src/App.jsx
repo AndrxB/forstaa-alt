@@ -1,38 +1,19 @@
 import './App.css'
-import Mainbody from './components/Mainbody'
-import AboutMe from './components/AboutMe'
-import Title from './components/Title'
-import ExtraInfoButton from './hooks/ExtraInfoButton'
-import Recommendations from './components/Recommendations'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+
 
 
 
 function App() {
   return (
-    <>
-      <header>
-          <Title />
-          <nav>
-            
-          </nav>
-        </header>
-
-      <body className="main-content-container">
-        <section id="hidden" className="left-content-container" />
-        <section className="middle-content-container">  
-
-          <section className="asides-container">
-            <aside className='left-aside'> <Mainbody /> </aside>
-            <aside className='right-aside'> <Recommendations /> </aside>
-          </section>
-          <section><ExtraInfoButton /></section>
-
-        
-        </section>
-        <section id="hidden" className="right-content-container" />
-      </body>
-      
-    </>  
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="AboutPage" element={<AboutPage/>} />
+      </Routes>
+    </Router>
   )
 }
 
