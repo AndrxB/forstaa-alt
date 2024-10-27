@@ -12,8 +12,8 @@ function Books() {
                 <img 
                     src={src} 
                     alt={`Book ${index + 1}`} 
-                    width="200" 
-                    height="300"
+                    width="100" 
+                    height="150"
                 />
                 
             ))}

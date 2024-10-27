@@ -12,27 +12,25 @@ function App() {
     <>
       <header>
           <Title />
-          <nav hidden><AboutMe/></nav>
+          <nav>
+            
+          </nav>
         </header>
 
       <body className="main-content-container">
-        <div className="left-content-container" />
-        <div className="middle-content-container">  
+        <section id="hidden" className="left-content-container" />
+        <section className="middle-content-container">  
 
-          <div className="asides-container">
-            <aside className='left-aside'>
-              <Recommendations />
-            </aside>
-            
-            <aside className='right-aside'>
-              <Mainbody />
-            </aside>
-          </div>
+          <section className="asides-container">
+            <aside className='left-aside'> <Mainbody /> </aside>
+            <aside className='right-aside'> <Recommendations /> </aside>
+          </section>
+          <section><ExtraInfoButton /></section>
+
         
-        </div>
-        <div className="right-content-container" />
+        </section>
+        <section id="hidden" className="right-content-container" />
       </body>
-      <section><ExtraInfoButton /></section>
       
     </>  
   )

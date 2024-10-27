@@ -9,11 +9,7 @@ class Title extends Component {
 
     render() {
         return(
-            <>
             <h1>Forstå Alt</h1>
-            </>
-                
-            
         )
     }
 } 

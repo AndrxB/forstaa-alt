@@ -3,24 +3,24 @@
 }
 
 header {
-  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 10px;
+  background-color: #333;
+  z-index: 1000; /* Make sure the header stays above other elements */
   text-align: center;
-  font-size: large;
 }
 
-header .Title {
-  background-color: #000000a0;
-  position: sticky;
-  padding: 10px;
+header nav{
+  background-color: black;
+  text-align: center;
 }
+
 
 section {
   background-color: #333;
-  padding: 20px;
   text-align: center;
-  justify-content: space-between;
 }
 
 .right-content-container, .left-content-container, .middle-content-container{
@@ -30,6 +30,15 @@ section {
   box-sizing: border-box;
   flex-basis: 100/3%;
   flex-grow: 0;
+  padding: 3rem;
+}
+
+.main-content-container {
+  margin-top: 60px; /* Push content down by the height of the fixed header */
+}
+
+#hidden{
+  visibility: collapse;
 }
 
 @media only screen and (max-width: 720px) {
@@ -63,10 +72,11 @@ section {
 .left-aside, .right-aside {
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 /* Left aside takes 20% of the width */
-.left-aside {
+.right-aside {
   background-color: blue;
   flex-basis: 20%;                /* 20% width */
   flex-grow: 0;
@@ -74,7 +84,7 @@ section {
 }
 
 /* Right aside takes 80% of the width */
-.right-aside {
+.left-aside {
   background-color: blue;
   flex-basis: 80%;                /* 80% width */
   flex-grow: 1;
