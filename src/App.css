@@ -34,16 +34,22 @@ section {
 
 @media only screen and (max-width: 720px) {
   .left-content-container, .right-content-container {
-    visibility: none;
+    display: none; /* Hides these containers on small screens */
   }
 
   .asides-container {
-    justify-content: space-between; /* Space between the two asides */
+    flex-direction: column;       /* Stack the asides vertically */
+    align-items: stretch;         /* Make asides take full width of the container */
     padding: 1rem;
-    flex-basis: 20%;
+    flex-basis: 100%;             /* Full width */
   }
 
+  .left-aside, .right-aside {
+    flex-basis: auto;             /* Remove width constraints on small screens */
+    width: 100%;                  /* Take full width of the asides container */
+  }
 }
+
 
 /* Container that holds both aside elements */
 .asides-container {
