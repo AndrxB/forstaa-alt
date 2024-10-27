@@ -32,6 +32,13 @@ section {
   flex-grow: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .left-content-container, .right-content-container {
+    visibility: hidden;
+  }
+
+}
+
 /* Container that holds both aside elements */
 .asides-container {
   display: flex;                 /* Ensures that asides are horizontally aligned */

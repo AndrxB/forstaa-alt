@@ -12,12 +12,11 @@ function App() {
     <>
       <header>
           <Title />
-          <nav><AboutMe/></nav>
+          <nav hidden><AboutMe/></nav>
         </header>
 
       <body className="main-content-container">
         <div className="left-content-container" />
-
         <div className="middle-content-container">        
           <div className='asides-container'>
             <aside className='left-aside'><Recommendations /></aside>
