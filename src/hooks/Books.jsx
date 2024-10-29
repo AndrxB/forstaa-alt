@@ -21,22 +21,25 @@ function Books() {
 
     return (
         <>
-            {books.map((book, index) => (
-                <a 
+            {books.map((book, index) => ( 
+                <div className="book">
+                    <a 
                     key={index} 
                     href={book.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
                 >
                     <img 
+                        className="book-image"
                         src={book.src} 
                         alt={`Book ${index + 1}`} 
                         width="100" 
                         height="150" 
                     />
-                    <p>{book.name}</p>
-                    <p> af {book.author}</p>
+                    <div className="book-name">{book.name}</div>
+                    <div className="book-author"> af {book.author}</div>
                 </a>
+                </div>
             ))}
         </>
     );

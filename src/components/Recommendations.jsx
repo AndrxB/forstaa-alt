@@ -9,9 +9,9 @@ class Recommendations extends Component {
     render(){
         return(
             <>
-                <h2>Anbefalede bøger</h2>
-                <div>(Links til bøger, og billeder under)</div>
-                <p><Books /></p>
+                <div className="books">
+                    <Books />
+                </div>
             </>
         )
     }

@@ -1,16 +1,20 @@
 import React from "react";
-import Title from "../components/Title"
+import Title from "../hooks/Title"
 import AboutMe from "../components/AboutMe"
 
 
 function AboutPage(){
     return(
         <>
-            <header>
+            <div className="title">
                 <Title />
-            </header>
+            </div>
+            
+            <h2>*UNDER CONSTRUCTION*</h2>
 
-            <AboutMe />
+            <section>
+                
+            </section>
         </>
         
     )
