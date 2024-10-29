@@ -58,13 +58,16 @@ function HomePage() {
                     text1="- Og hvordan finder man så et misforstået ord/grammatik? Jo, det er enkelt nok: man går tilbage til der, 
                     hvor teksten var klar og tydelig at forstå, og finder det sted hvor den holdt op med det, og lige præcis 
                     der er der et misforstået ord."
-                />
-        
-                <h2 className="books-title">Jeg hjælper med at finde gode ordbøger der passer til dig.</h2>
-                <div>Disse bøger er topklasse (tekst burde nok ændres)</div>
-
-                <Recommendations />          
+                />        
             </div>
+
+
+            <div className="books-container">
+                <h2 className="books-title">Jeg hjælper med at finde gode ordbøger der passer til dig.</h2>
+                <p>Disse bøger er topklasse (tekst burde nok ændres)</p>
+            </div>
+
+            <Recommendations />  
             
         </>
     )
