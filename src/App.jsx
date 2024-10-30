@@ -1,5 +1,5 @@
-import './styleSheets/HomePage.css'
-import './styleSheets/AboutPage.css'
+import './css/HomePage.css'
+import './css/AboutPage.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'

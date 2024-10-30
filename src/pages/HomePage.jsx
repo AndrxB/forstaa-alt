@@ -13,7 +13,17 @@ function HomePage() {
     return (
         <>
             <Title />
+            <div className="storyboard-container">
+                <StoryBoardText 
+                    caption="Læseproblemer blandt Danskerne"
+                    text1="hejhejhejhejhejhejhejhejhejhejhejhej 
+                    hejhejhejhejhejhejhejhejhejhejhejhejhej 
+                    hejhejhejhejhejhejhejhejhejhejhejhejhejhejhej
+                    hejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhejhej"
+                />
 
+                
+            </div>
             
             
             <div className="storyboard-container">
