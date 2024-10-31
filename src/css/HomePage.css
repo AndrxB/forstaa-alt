@@ -64,16 +64,17 @@ section {
 .storyboard-section {
   display: flex;
   text-align: justify;
-  align-items: center;
+  align-items: stretch;
   flex-direction: row;
   gap: 20px;
 }
 
 .sidebar {
   background-color: black;
-  color: transparent;
   border-radius: 100px;
   width: 5px;
+  flex-shrink: 0;
+  margin-block: 25px;
 }
 
 .readmore-button {

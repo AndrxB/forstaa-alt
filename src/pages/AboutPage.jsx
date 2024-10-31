@@ -1,20 +1,15 @@
 import React from "react";
 import Title from "../hooks/Title"
-import AboutMe from "../components/AboutMe"
+import InfoCard from "../hooks/InfoCard";
 
 
 function AboutPage(){
     return(
         <>
-            <div className="title">
-                <Title />
-            </div>
+            <Title />
             
-            <h2>*UNDER CONSTRUCTION*</h2>
-
-            <section>
-                
-            </section>
+            <InfoCard />
+            
         </>
         
     )
