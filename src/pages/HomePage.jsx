@@ -14,8 +14,6 @@ function HomePage() {
         <>
             <Title />
             
-            <div>hej</div>
-            
             
             <div className="storyboard-container">
                 <StoryBoardText 
