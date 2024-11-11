@@ -2,7 +2,7 @@
 > Authored by: André Birk
 > Start-date: 15.10.2024
 
-Version: v1.0.4
+Version: v1.0.5
 
 - [Repository](https://github.com/AndrxB/School-Website)
 
