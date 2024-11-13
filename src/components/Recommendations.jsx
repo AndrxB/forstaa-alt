@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Books from "../hooks/Books";
 
-class Recommendations extends Component {
+export default class Recommendations extends Component {
     constructor(){
         super()
     }
@@ -16,5 +16,3 @@ class Recommendations extends Component {
         )
     }
 }
-
-export default Recommendations

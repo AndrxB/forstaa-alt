@@ -31,6 +31,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 180px;
 }
 
 @media only screen and ( min-width: 850px ) {
