@@ -35,6 +35,16 @@
   background-color: var(--primary);
 }
 
+footer {
+  background-color: var(--secondary);
+}
+
+body footer p {
+    color: var(--primary);
+}
+
+
+
 a {
   font-weight: 500;
   color: var(--link);

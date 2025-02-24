@@ -89,6 +89,15 @@ function App() {
           asdasda
         </div>
 
+        <footer className='absolute w-screen bottom-0 h-40 pt-5 flex flex-col items-center justify-start gap-10'>
+          <p className='text-[20px]'> Er du interreseret? </p>
+          <div className='z-100'>
+            <label>asd</label>
+            <input className="border-solid p-2 z-100" placeholder='' />
+
+          </div>
+        </footer>
+
       </main>
     </>
   )
