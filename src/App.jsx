@@ -1,14 +1,10 @@
-import { useState } from 'react'
 import './App.css'
 import ThemeSwitcher from './components/ThemeSwitcher'
-import Themes from './colourthemes.json'
-import text from './text.json'
+import text from './json/text.json'
 import BurgerMenu from './components/BurgerMenu'
-import instagrampng from './assets/instagram.png'
-import linkedinpng from './assets/linkedin.png'
+import SoMeButton from './components/someButton'
 
 function App() {
-
 
   return (
     <>
@@ -24,16 +20,15 @@ function App() {
           min-[796px]:justify-between'
         >
           <div className='flex-row gap-5 ml-10 min-[796px]:pr-30 max-[796px]:hidden'>
-            <img className='max-[796px]:hidden' src={instagrampng} alt='Instagram' />
-            <img className='max-[796px]:hidden' src={linkedinpng} alt='LinkedIn' />
+            <SoMeButton constraints={'max-[796px]:hidden'} />
           </div>
 
           <div className='flex flex-col'>
-            <p className='text-[40px]'>Forstå alt</p>
+            <p className='text-[40px]' id='app-name'>Forstå alt</p>
             <nav className='flex flex-row gap-10'>
-              <div className='max-[796px]:hidden'>About</div>
-              <div className='max-[796px]:hidden'>Services</div>
-              <div className='max-[796px]:hidden'>Coaching</div>
+              <div className='max-[796px]:hidden' id='nav-bar'>About</div>
+              <div className='max-[796px]:hidden' id='nav-bar'>Services</div>
+              <div className='max-[796px]:hidden' id='nav-bar'>Coaching</div>
             </nav>
           </div>
 
@@ -45,23 +40,28 @@ function App() {
         </div>
 
         <div className='flex flex-col items-center justify-center w-full' >
-          <p className='text-[20px]'>Lær at lære</p>
-          <h1 className='text-[40px] text-center'>Undervisning</h1>
-          <h1 className='text-[40px] text-center'>i dit tempo</h1>
+          <p className='text-[20px]'>{text.frontpage.smalltitle}</p>
+          <h1 className='text-[40px] text-center'>{text.frontpage.bigtitle1}</h1>
+          <h1 className='text-[40px] text-center'>{text.frontpage.bigtitle2}</h1>
         </div>
-
       </header>
 
-      <main 
-        className='absolute flex flex-col top-90 left-0 w-screen gap-10'
-      >
+      <main className='absolute flex flex-col top-90 left-0 w-screen gap-10'>
         <div id='intro-placeholder' className='visible my-10 h-150'>(placeholder image)</div>
-        <div 
-          className='ml-50 mr-50 mb-30
-          max-[600px]:ml-10 max-[600px]:mr-10
-          '
-        >
-          <p>{text.text1.content}</p>
+        <h1>{text.frontpage.threepillartitle}</h1>
+        <div className='ml-50 mr-50 mb-30 flex flex-row flex-wrap justify-center gap-10 mt-10'>
+          <div className='flex flex-col w-50 gap-10'>
+            <h3 className='text-[25px]'>{text.frontpage.pillar1title1}</h3>
+            <span>{text.placeholders['1s']}</span>
+          </div>
+          <div className='flex flex-col w-50 gap-10'>
+            <h3 className='text-[25px]'>{text.frontpage.pillar1title2}</h3>
+            <span>{text.placeholders['1s']}</span>
+          </div>
+          <div className='flex flex-col w-50 gap-10'>
+            <h3 className='text-[25px]'>{text.frontpage.pillar1title3}</h3>
+            <span>{text.placeholders['1s']}</span>
+          </div>
         </div>
         <div id='divider-bar' className='h-1 ml-10 mr-10 rounded-xs'/>
 
@@ -80,7 +80,6 @@ function App() {
               </div>
             </div>
           </div>
-
         </div>
 
         <div id='divider-bar' className='h-1 ml-10 mr-10 rounded-xs'/>
@@ -89,15 +88,9 @@ function App() {
           asdasda
         </div>
 
-        <footer className='absolute w-screen bottom-0 h-40 pt-5 flex flex-col items-center justify-start gap-10'>
-          <p className='text-[20px]'> Er du interreseret? </p>
-          <div className='z-100'>
-            <label>asd</label>
-            <input className="border-solid p-2 z-100" placeholder='' />
-
-          </div>
+        <footer className='absolute w-screen bottom-0 h-50 pt-5 flex flex-col items-center justify-start gap-10'>
+          
         </footer>
-
       </main>
     </>
   )

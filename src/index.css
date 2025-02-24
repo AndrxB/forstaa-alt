@@ -43,7 +43,13 @@ body footer p {
     color: var(--primary);
 }
 
+form input {
+  border-color: var(--primary);
+}
 
+form input::placeholder {
+  color: var(--primary);
+}
 
 a {
   font-weight: 500;
@@ -62,11 +68,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--background); /* Ensure body uses background variable */
+  background-color: var(--primary); /* Ensure body uses background variable */
   color: var(--text); /* Ensure body text color */
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
+}
+
+main {
+  background-color: var(--primary); /* Ensure body uses background variable */
 }
 
 h1 {

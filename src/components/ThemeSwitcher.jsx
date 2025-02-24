@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import colorThemes from '../colourthemes.json';  // Import your JSON file
+import colorThemes from '../json/colourthemes.json';  // Import your JSON file
 
 export default function ThemeSwitcher({ constraints }) {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'vintage');
@@ -18,10 +18,11 @@ export default function ThemeSwitcher({ constraints }) {
 
   const handleThemeSwitch = () => {
     const newTheme = theme === 'vintage' ? 'dark' : theme === 'dark' ? 'lightTeal' : 'vintage';
+    
     setTheme(newTheme);
   };
 
   return (
-    <p className={constraints} onClick={handleThemeSwitch}>Tema</p>
+    <p className={constraints} id='theme-button' onClick={handleThemeSwitch}>Tema</p>
   );
 }

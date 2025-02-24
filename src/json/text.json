@@ -1,0 +1,29 @@
+{
+    "frontpage": {
+        "smalltitle": "Lær at lære",
+        "bigtitle1": "Undervisning",
+        "bigtitle2": "i dit tempo",
+        "content": "50% af danskerne har problemer med at forstå hvad de læser, og hvorfor nu det? Jo, den metode som alt for mange lærere benytter sig af, har jeg døbt 'Det-Kommer-Vi-Til-Senere-Metoden'. Og hvorfor nu det? Jo, når lille Åge siger at han ikke forstår et eller andet i det han er ved at læse højt i klassen, siger læreren: 'Det skal du ikke tænke over, det kommer vi til senere – Du læser bare så godt du nu kan.' Når man har fået dette at vide tilpas mange gange offentligt i klassen, så lærer man at ord og grammatik man ikke forstår, gør man ikke noget ved. Det er denne måde 50% af danskerne er blevet funktionelle analfabeter, desværre.",
+        "threepillartitle": "Arbejd med mig",
+        "pillar1title1": "1:1 Coaching",
+        "pillar1": "",
+        "pillar1title2": "Fysiske møder",
+        "pillar2": "",
+        "pillar1title3": "Kvalitets arbejde",
+        "pillar3": "",
+        "title2":"Hvordan foregår det?",
+        "contentgrid1": "Jo, man finder en tekst der ikke er for svær og ikke for let, og ordbøger der passer til ens niveau, og så når man kommer til ord eller grammatik man ikke forstår fuldt ud, så slår man det op…..og det stopper ikke der, for så finder man den definition som passer til den tekst man læser, og så laver man sætninger med dette ord i denne definition, indtil det er nemt at lave varierende sætninger.",
+        "contentgrid2": "Det kan være en hjælp at demonstrere det man sidder med, med et demokit, som er en lille bøtte småting (f.eks. viskelæder, elastikker, træ, plastic og metalting der ikke er så store), og så kan man vise / (demonstrere=demo) hvad det nu end er ordet betyder i den definition. Man kan også bruge modellervoks til dette."
+    },
+    "kontaktinfo": {
+        "name": "Allan Birk",
+        "telefonnummer": "",
+        "mail": "allanhasbeenhacked@mail.com",
+        "text": "Det tager normalt omkring 10 timer med 2 timers undervisning om ugen, og så bliver du bedre til at læse og forstå end selv de bedste lærere du nogensinde har haft."
+    },
+    "placeholders": {
+        "1s": "Lorem ipsum odor amet, consectetuer adipiscing elit.",
+        "2s": "Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh facilisi interdum sed volutpat ligula nunc, sapien euismod bibendum. Interdum hendrerit morbi ipsum commodo tempor lectus.",
+        "3s": "Lorem ipsum odor amet, consectetuer adipiscing elit. Maximus euismod justo; fermentum pulvinar turpis pharetra euismod. Suspendisse dui volutpat scelerisque dolor semper libero lectus convallis. Etiam augue ultricies id cras justo penatibus turpis. Fames consectetur non etiam tincidunt massa varius. Vehicula porttitor sodales himenaeos nibh ex urna venenatis adipiscing. Euismod at potenti ac dictum ipsum suscipit luctus. Venenatis nullam gravida justo ullamcorper aptent pharetra aptent."
+    }
+}

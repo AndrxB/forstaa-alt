@@ -9,3 +9,11 @@
   background-color: rgba(155, 42, 27, 0.349);
 }
 
+#nav-bar:hover, #theme-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#app-name:hover {
+  cursor: pointer;
+}
