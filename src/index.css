@@ -31,6 +31,10 @@
   background-color: var(--primary);
 }
 
+#burger-menu {
+  background-color: var(--primary);
+}
+
 a {
   font-weight: 500;
   color: var(--link);
@@ -50,6 +54,9 @@ body {
   min-height: 100vh;
   background-color: var(--background); /* Ensure body uses background variable */
   color: var(--text); /* Ensure body text color */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
 }
 
 h1 {
