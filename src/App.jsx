@@ -21,15 +21,15 @@ function App() {
         <div 
           className='flex flex-row
           items-center w-full gap-5 pb-15 pt-10
-          min-[798px]:justify-between'
+          min-[796px]:justify-between'
         >
-          <div className='flex-row gap-5 ml-10 min-[796px]:pr-30 max-[768px]:hidden'>
+          <div className='flex-row gap-5 ml-10 min-[796px]:pr-30 max-[796px]:hidden'>
             <img className='max-[796px]:hidden' src={instagrampng} alt='Instagram' />
             <img className='max-[796px]:hidden' src={linkedinpng} alt='LinkedIn' />
           </div>
 
           <div className='flex flex-col'>
-            <p className='text-[40px] '>Forstå alt</p>
+            <p className='text-[40px]'>Forstå alt</p>
             <nav className='flex flex-row gap-10'>
               <div className='max-[796px]:hidden'>About</div>
               <div className='max-[796px]:hidden'>Services</div>
