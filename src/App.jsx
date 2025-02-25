@@ -1,8 +1,8 @@
 import './App.css'
 import ThemeSwitcher from './components/ThemeSwitcher'
 import text from './json/text.json'
-import BurgerMenu from './components/BurgerMenu'
-import SoMeButton from './components/someButton'
+import BurgerMenu from './components/BurgerMenu.jsx'
+import SoMeButton from './components/SoMeButton.jsx'
 import stockPhotoVertical from './assets/stock-photo-vertical.jpg'
 import teacherHorizontal from './assets/teacher-stock-selfie.jpg'
 

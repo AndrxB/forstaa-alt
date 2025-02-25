@@ -29,10 +29,8 @@ jobs:
             echo "version_type=major" >> $GITHUB_ENV
           elif [[ "${{ github.event.head_commit.message }}" =~ "minor" ]]; then
             echo "version_type=minor" >> $GITHUB_ENV
-          elif [[ "${{ github.event.head_commit.message }}" =~ "patch" ]]; then
-            echo "version_type=patch" >> $GITHUB_ENV
           else
-            echo "version_type=none" >> $GITHUB_ENV
+            echo "version_type=patch" >> $GITHUB_ENV
           fi
 
       # Step 2: Run npm version to bump the correct version
