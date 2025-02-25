@@ -7,7 +7,7 @@ import SoMeButton from './someButton'
 
 export default function BurgerMenu() {
     const [visible, setVisibility] = useState(false)
-    
+     
     const handleClick = () => {
         setVisibility(!visible)
     }
