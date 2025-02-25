@@ -22,28 +22,6 @@
       "background": "#F4F7F7",
       "text": "#1F4E5F",
       "link": "#79A8A9"
-    },
-    "test": {
-      "darkprimary" : "#5D4037",
-      "lightprimary" : "#D7CCC8",
-      "primary" : "#795548",
-      "text" : "#FFFFFF",
-      "icons" : "#FFFFFF",
-      "accent" : "#FF5252",
-      "primarytext" : "#212121",
-      "secondarytext" : "#757575",
-      "dividercolor" : "#BDBDBD"
-    },
-    "test2": {
-      "darkprimary" : "#303F9F",
-      "lightprimary" : "#C5CAE9",
-      "primary" : "#3F51B5",
-      "text" : "#FFFFFF",
-      "icons" : "#FFFFFF",
-      "accent" : "#009688",
-      "primarytext" : "#212121",
-      "secondarytext" : "#757575",
-      "dividercolor" : "#BDBDBD"
     }
   }
 }

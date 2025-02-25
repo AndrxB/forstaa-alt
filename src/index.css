@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lato", san-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -79,6 +79,10 @@ main {
   background-color: var(--primary); /* Ensure body uses background variable */
 }
 
+h1, h2 {
+  font-family: "Poiret One", cursive;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -90,7 +94,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: "Lato", sans-serif;
   background-color: var(--secondary); /* Use secondary color for button */
   color: var(--light-text); /* Button text color */
   cursor: pointer;

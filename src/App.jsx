@@ -3,6 +3,8 @@ import ThemeSwitcher from './components/ThemeSwitcher'
 import text from './json/text.json'
 import BurgerMenu from './components/BurgerMenu'
 import SoMeButton from './components/someButton'
+import stockPhotoVertical from './assets/stock-photo-vertical.jpg'
+import teacherHorizontal from './assets/teacher-stock-selfie.jpg'
 
 function App() {
 
@@ -46,50 +48,76 @@ function App() {
         </div>
       </header>
 
-      <main className='absolute flex flex-col top-90 left-0 w-screen gap-10'>
-        <div id='intro-placeholder' className='visible my-10 h-150'>(placeholder image)</div>
+      <main className='absolute flex flex-col top-150 left-0 w-screen gap-10'>
+        <img 
+          src={teacherHorizontal} 
+          className="h-[700px] w-auto object-cover max-w-none"
+        />
+
+
         <h1>{text.frontpage.threepillartitle}</h1>
-        <div className='ml-50 mr-50 mb-30 flex flex-row flex-wrap justify-center gap-10 mt-10'>
+
+        <div className='ml-50 mr-50 mb-30 flex flex-row flex-wrap justify-center gap-10 mt-10 max-[796px]:mr-5 max-[796px]:ml-5'>
           <div className='flex flex-col w-50 gap-10'>
             <h3 className='text-[25px]'>{text.frontpage.pillar1title1}</h3>
             <span>{text.placeholders['1s']}</span>
+            {/* {text.frontpage.pillar1} */}
           </div>
           <div className='flex flex-col w-50 gap-10'>
             <h3 className='text-[25px]'>{text.frontpage.pillar1title2}</h3>
             <span>{text.placeholders['1s']}</span>
+            {/* {text.frontpage.pillar2} */}
           </div>
           <div className='flex flex-col w-50 gap-10'>
             <h3 className='text-[25px]'>{text.frontpage.pillar1title3}</h3>
             <span>{text.placeholders['1s']}</span>
+            {/* {text.frontpage.pillar3} */}
           </div>
         </div>
         <div id='divider-bar' className='h-1 ml-10 mr-10 rounded-xs'/>
 
-        <div className='flex-1 flex flex-row items-center ml-10 mr-10 gap-10 pb-100 flex-wrap justify-center'>
-          <div className='flex-none w-1/2'>
-            <p className='text-[30px]'>Hvordan foregår det?</p>
+        <div 
+          className='flex-1 flex flex-row items-start ml-10 mr-10 gap-40 flex-wrap justify-center
+          max-[796px]:mr-20 max-[796px]:ml-20'
+        >
+          <div 
+            className='w-1/3 flex flex-col gap-10
+            max-[768px]:w-screen'
+          >
+            <h1 className='text-[30px]'>Hvordan foregår det?</h1>
+            {/* <span>{text.frontpage.title2answer}</span> */}
+            <span>{text.placeholders['3s']}</span>
           </div>
 
-          <div className='flex-1 flex flex-col flex-wrap items-center justify-self gap-10'>
-            <div className='flex flex-row'>
-              <div className='flex-1'>
-                Lorem ipsum odor amet, consectetuer adipiscing elit.
+          <div className='w-1/3 flex flex-row flex-wrap items-center justify-self gap-10'>
+            <div className='flex flex-col gap-5'>
+                {text.frontpage.contentgrid1}
+                <a href='_blank'> Find din ordbog her </a>
               </div>
-              <div className='flex-1'>
-                Lorem ipsum odor amet, consectetuer adipiscing elit.
+              <div className='flex flex-col gap-5'>
+                {text.frontpage.contentgrid2}
+                <a href='_blank'> Sådan laver du et demokit </a>
               </div>
-            </div>
           </div>
         </div>
 
         <div id='divider-bar' className='h-1 ml-10 mr-10 rounded-xs'/>
 
-        <div className='pb-100'>
-          asdasda
+        <div className='pb-[100px] flex flex-row-reverse flex-wrap items-start justify-center ml-10 mr-10'>
+          <div className='w-1/2 flex flex-col gap-5'>
+            <h1 className='text-[30px]'>{text.frontpage.contentquestion}</h1>
+            <span>{text.frontpage.content}</span>
+          </div>
+
+          <div className='w-1/2 flex flex-col gap-10 items-center'>
+            <img src={stockPhotoVertical} alt='stockphoto' className='w-75' />
+          </div>
         </div>
 
-        <footer className='absolute w-screen bottom-0 h-50 pt-5 flex flex-col items-center justify-start gap-10'>
-          
+
+        <footer className='absolute w-screen bottom-0 pr-10 flex items-center flex-row justify-end'>
+          <span>Er du interreseret?</span>
+          <button>kontakt mig</button>
         </footer>
       </main>
     </>
