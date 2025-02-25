@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import burgerpng from '../assets/bars-staggered.png'
-import instagrampng from '../assets/instagram.png'
-import linkedinpng from '../assets/linkedin.png'
 import ThemeSwitcher from './ThemeSwitcher'
 import SoMeButton from './someButton'
 
