@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import burgerpng from '../assets/bars-staggered.png'
-import ThemeSwitcher from './ThemeSwitcher'
+import ThemeSwitcher from './ThemeSwitcher.jsx'
+import SoMeButton from './SoMeButton.jsx'
 
 export default function BurgerMenu() {
     const [visible, setVisibility] = useState(false)

@@ -12,7 +12,7 @@ function App() {
     <>
     
       <header 
-        className='absolute left-0 top-0 flex flex-col align-center flex-nowrap
+        className='absolute left-0 top-0 flex flex-col align-center flex-nowrap text-ellipsis
         items-center w-full gap-15 pb-10 z-100' 
         id='top-Nav'
       >
@@ -78,18 +78,18 @@ function App() {
 
         <div 
           className='flex-1 flex flex-row items-start ml-10 mr-10 gap-40 flex-wrap justify-center
-          max-[796px]:mr-20 max-[796px]:ml-20'
+          max-[796px]:mr-5 max-[796px]:ml-5 max-[796px]:gap-10'
         >
           <div 
             className='w-1/3 flex flex-col gap-10
-            max-[768px]:w-screen'
+            max-[796px]:w-screen'
           >
             <h1 className='text-[30px]'>Hvordan foregår det?</h1>
             {/* <span>{text.frontpage.title2answer}</span> */}
             <span>{text.placeholders['3s']}</span>
           </div>
 
-          <div className='w-1/3 flex flex-row flex-wrap items-center justify-self gap-10'>
+          <div className='w-1/3 flex flex-row flex-wrap items-center justify-self gap-10 max-[796px]:w-screen'>
             <div className='flex flex-col gap-5'>
                 {text.frontpage.contentgrid1}
                 <a href='_blank'> Find din ordbog her </a>
@@ -103,14 +103,15 @@ function App() {
 
         <div id='divider-bar' className='h-1 ml-10 mr-10 rounded-xs'/>
 
-        <div className='pb-[100px] flex flex-row-reverse flex-wrap items-start justify-center ml-10 mr-10'>
-          <div className='w-1/2 flex flex-col gap-5'>
-            <h1 className='text-[30px]'>{text.frontpage.contentquestion}</h1>
-            <span>{text.frontpage.content}</span>
+        <div className='flex flex-col flex-wrap ml-10 mr-10 min-[796px]:flex-row max-[796px]:mr-0 max-[796px]:ml-0 pb-40 justify-center items-center'>
+          
+          <div className='w-1/2 flex flex-col gap-10 items-center max-[796px]:w-3/4'>
+            <img src={stockPhotoVertical} alt='stockphoto' className='w-1/2' />
           </div>
 
-          <div className='w-1/2 flex flex-col gap-10 items-center'>
-            <img src={stockPhotoVertical} alt='stockphoto' className='w-75' />
+          <div className='w-1/2 flex flex-col gap-5 max-[796px]:w-3/4 '>
+            <h1 className='text-[30px]'>{text.frontpage.contentquestion}</h1>
+            <span>{text.frontpage.content}</span>
           </div>
         </div>
 
