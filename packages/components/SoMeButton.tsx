@@ -1,19 +1,18 @@
-import Instagram from '../assets/instagram.png'
-import LinkedIn from '../assets/linkedin.png'
+import Image from 'next/image'
 
 
-export default function SoMeButton({ constraints, src, alt }) {
+export default function SoMeButton({ constraints } : { constraints?: string }) {
 
     const SoMes = {
         "Instagram" : {
             "SocialMedia" : "Instagram",
             "Link" : "",
-            "src" : Instagram
+            "src" : '/instagram.png'
         },
         "LinkedIn" : {
             "SocialMedia" : "LinkedIn",
             "Link" : "",
-            "src" : LinkedIn
+            "src" : '/linkedin.png'
         }
     }
 
@@ -26,11 +25,12 @@ export default function SoMeButton({ constraints, src, alt }) {
                     target="_blank" 
                     rel="noopener noreferrer"
                 >
-                    <img 
+                    <Image 
                         className={constraints} 
                         src={value.src} 
                         alt={value.SocialMedia} 
-                        id="SoMe-button"
+                        width={20}
+                        height={20}
                     />
                 </a>
             ))}
