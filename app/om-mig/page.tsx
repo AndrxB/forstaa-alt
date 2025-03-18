@@ -1,6 +1,6 @@
 "use client"
 
-import { Header } from "@/packages/components/header"
+import { Header } from "@/packages/ui/header"
 
 export default function OmMig() {
     return(

@@ -1,5 +1,6 @@
 "use client"
-import { Header, SubHeader } from "@/packages/components/header";
+import { Header } from "@/packages/ui/header"
+
 import { A } from "@/packages/ui/typography";
 
 export default function Services() {
