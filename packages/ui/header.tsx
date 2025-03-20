@@ -44,13 +44,13 @@ export const Header = ({children, className} : HeaderProps) => {
                 <div className="md:hidden flex justify-end w-full">
                     <CollapseableMenu>
                         <CollapseableMenuItem isFirst={true}>
-                            <A className="cursor-pointer hover:font-bold" href="/services">Services</A>
+                            <A className="cursor-pointer text-[30px] hover:font-bold" href="/services">Services</A>
                         </CollapseableMenuItem>
                         <CollapseableMenuItem>
-                            <A className="cursor-pointer hover:font-bold" href="/coaching">Coaching</A>
+                            <A className="cursor-pointer text-[30px] hover:font-bold" href="/coaching">Coaching</A>
                         </CollapseableMenuItem>
                         <CollapseableMenuItem>
-                            <A className="cursor-pointer hover:font-bold" href="/om-mig">Om mig</A>
+                            <A className="cursor-pointer text-[30px] hover:font-bold" href="/om-mig">Om mig</A>
                         </CollapseableMenuItem>
                     </CollapseableMenu>
                 </div>

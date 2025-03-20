@@ -1,37 +1,45 @@
 import Image from 'next/image'
-import instagram from '@/packages/assets/instagram.png'
-import linkedin from '@/packages/assets/linkedin.png'
+import linkedin from '@/packages/assets/linkedin.svg'
+import instagram from '@/packages/assets/instagram.svg'
+import facebook from '@/packages/assets/facebook.svg'
+
 
 export default function SoMeButton({ constraints } : { constraints?: string }) {
-    const imageSize = 30
+    const imageSize = 35
     const SoMes = {
         "Instagram" : {
             "SocialMedia" : "Instagram",
             "Link" : "",
-            "src" : instagram
+            "Icon" : instagram
+        },
+        "Facebook" : {
+            "SocialMedia" : "Facebook",
+            "Link" : "",
+            "Icon" : facebook
         },
         "LinkedIn" : {
             "SocialMedia" : "LinkedIn",
             "Link" : "",
-            "src" : linkedin
+            "Icon" : linkedin
         }
     }
     
     return(
         <>
             {Object.entries(SoMes).map(([key, value]) => (
+                
                 <a 
                     key={key} 
                     href={value.Link} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className={constraints}
                 >
                     <Image 
-                        className={constraints} 
-                        src={value.src.src} 
+                        src={value.Icon} 
                         alt={value.SocialMedia} 
-                        width={imageSize}
-                        height={imageSize}
+                        width={imageSize} 
+                        height={imageSize} 
                     />
                 </a>
             ))}

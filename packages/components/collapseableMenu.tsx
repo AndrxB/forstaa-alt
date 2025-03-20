@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "../ui/utils";
-import Image from 'next/image'
-import bars from '@/packages/assets/bars-staggered.png'
 import { Divider } from "../ui/divider";
 import { A, H1 } from "../ui/typography";
+import { AlignJustify, ArrowRight, CornerDownRight } from "lucide-react";
+import SoMeButton from "./SoMeButton";
 
 type CollapseableMenuProps = {
     title?: string;
@@ -23,11 +23,8 @@ export const CollapseableMenu = ({
 
     return(
         <div className={cn("flex z-999 mx-[20px] flex-row-reverse", className)}>
-            <Image 
-                src={bars.src}
-                alt="bars"
-                width={40}
-                height={40}
+            <AlignJustify 
+                size={50}
                 className={cn("z-1000 cursor-pointer")}
                 onClick={() => setVisibility(!visible)}
             />
@@ -44,6 +41,9 @@ export const CollapseableMenu = ({
                     </div>
                     <div className="flex flex-col items-center justify-center w-full gap-10 mt-20">
                         {children}
+                    </div>
+                    <div className="flex flex-row gap-3 absolute bottom-[20px] right-[20px]">
+                        <SoMeButton />
                     </div>
                 </div>
             }
@@ -65,8 +65,11 @@ export const CollapseableMenuItem = ({
 }: CollapseableMenuItemProps) => {
     return(
         <div className={cn("flex flex-col w-full items-center", cn(className, `gap-${gap}`))}>
-            { isFirst && <Divider className="w-1/2 translate-x-0.5"/> }
-            {children}
+            { isFirst ? <Divider className="w-1/2 translate-x-0.5"/> : null }
+            <div className="flex flex-row items-center gap-5">
+                <CornerDownRight />
+                {children}
+            </div>
             <Divider className="w-1/2 translate-x-0.5"/>
         </div>
     )
