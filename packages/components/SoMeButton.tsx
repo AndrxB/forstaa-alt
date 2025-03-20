@@ -1,21 +1,22 @@
 import Image from 'next/image'
-
+import instagram from '@/packages/assets/instagram.png'
+import linkedin from '@/packages/assets/linkedin.png'
 
 export default function SoMeButton({ constraints } : { constraints?: string }) {
-
+    const imageSize = 30
     const SoMes = {
         "Instagram" : {
             "SocialMedia" : "Instagram",
             "Link" : "",
-            "src" : '/instagram.png'
+            "src" : instagram
         },
         "LinkedIn" : {
             "SocialMedia" : "LinkedIn",
             "Link" : "",
-            "src" : '/linkedin.png'
+            "src" : linkedin
         }
     }
-
+    
     return(
         <>
             {Object.entries(SoMes).map(([key, value]) => (
@@ -27,10 +28,10 @@ export default function SoMeButton({ constraints } : { constraints?: string }) {
                 >
                     <Image 
                         className={constraints} 
-                        src={value.src} 
+                        src={value.src.src} 
                         alt={value.SocialMedia} 
-                        width={20}
-                        height={20}
+                        width={imageSize}
+                        height={imageSize}
                     />
                 </a>
             ))}

@@ -44,3 +44,19 @@ button:hover {
 #foreground {
   background-color: var(--foreground);
 }
+
+#accent {
+  background-color: var(--accent);
+}
+
+#detail {
+  background-color: var(--detail);
+}
+
+form input, textarea, button {
+  border-color: var(--accent);
+}
+
+form button {
+  color: var(--secondary);
+}

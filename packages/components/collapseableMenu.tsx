@@ -22,7 +22,7 @@ export const CollapseableMenu = ({
   }, [visible]);
 
     return(
-        <div className={cn("flex z-999 mx-[20px] -top-0.5 right-0 flex-row-reverse", className)}>
+        <div className={cn("flex z-999 mx-[20px] flex-row-reverse", className)}>
             <Image 
                 src={bars.src}
                 alt="bars"
@@ -33,7 +33,7 @@ export const CollapseableMenu = ({
             />
     
             {visible && 
-                <div className="absolute items-start justify-start p-[20px] w-full h-screen flex flex-col gap-5 top-0 left-0 z-50 -translate-y-9 translate-x-5" id="primary">
+                <div className="absolute items-start justify-start p-[20px] w-full h-screen flex flex-col gap-5 top-0 left-0 z-50 -translate-y-8" id="primary">
                     <div>
                         <A className="text-[50px] cursor-pointer hover:font-bold" href="/">
                             <H1>

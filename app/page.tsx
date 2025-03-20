@@ -44,12 +44,8 @@ export default function Home() {
         </Section>
 
         <Section divider={{position: "start"}} title='Hvordan foregår det?'>
-          <Section2Col className='flex flex-wrap items-start justify-center gap-10'
-            left = {
-              <div className='flex flex-col gap-10 min-w-[320px] w-1/3'>
-                <span>{text.placeholders['3s']}</span>
-              </div>
-            }
+          <Section2Col className='flex flex-wrap items-start justify-center gap-30'
+            left = { <div className="p-2 rounded min-w-[400px] self-center min-h-[400px] drop-shadow-2xl my-10" id="foreground" /> }
             
             right = {
               <div className='flex flex-row flex-wrap items-center justify-self text-center gap-10 min-w-[320px] w-1/3'>
@@ -67,24 +63,18 @@ export default function Home() {
         </Section>
 
         <Section divider={{position: "start"}} title={text.frontpage.contentquestion} className='pb-50'>
-          <Section2Col
-            className='flex flex-wrap gap-10'
+          <Section2Col className='flex flex-wrap gap-30'
             left={
-              <div className='flex flex-col gap-10 items-center min-w-[320px] w-1/3'>
-                placeholder image
-                
-              </div>
-            }
-            right={
               <div className='flex flex-col gap-5 min-w-[320px] w-1/3'>
-                <span>{text.frontpage.content}</span>
+                <span className='whitespace-pre-line'>{text.frontpage.content}</span>
               </div>
             }
+            right={ <div className="p-2 rounded min-w-[400px] self-center min-h-[400px] drop-shadow-2xl my-10" id="foreground" /> }
           />
         </Section>
         
       </main>
-
+      
     </>
   )
 }

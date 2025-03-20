@@ -1,6 +1,7 @@
 import { A, H1 } from "../ui/typography"
 import { cn } from "../ui/utils"
 import { CollapseableMenu, CollapseableMenuItem } from "../components/collapseableMenu"
+import SoMeButton from "../components/SoMeButton"
 
 type HeaderProps = {
   children? : React.ReactNode
@@ -8,40 +9,57 @@ type HeaderProps = {
 }
 export const Header = ({children, className} : HeaderProps) => {
     return(
-        <header className='relative flex flex-col gap-10 w-full top-15'>
-            <SubHeader className='relative flex flex-row gap-10 justify-between px-[20px]'>
-                <div className='relative flex flex-row max-[768px]:collapse'>
-                    <div>link</div>
-                    <div>link</div>
-                </div>
-                <div className='text-[50px] z-999 w-full items-center absolute left-1/2 -translate-y-10 -translate-x-1/2 flex flex-col max-[768px]:items-start px-[20px]'>
-                    <A href="/">
+        <header className='relative flex flex-col gap-10 w-full top-10'>
+            <SubHeader className="grid grid-cols-3 px-[20px] items-center justify-between md:grid-cols-3 max-md:items-start">
+                {/* Left Section (Shows Logo on Mobile) */}
+                <div className="flex items-center">
+                    <A href="/" className="md:hidden block">
                         <H1>Forstå Alt</H1>
-                    </A> 
-                    <div className='flex flex-row text-[15px] w-1/2 justify-center gap-4 text-center max-[768px]:collapse'>
-                        <A className='cursor-pointer hover:font-bold' href='/services'>Services</A>
-                        <A className='cursor-pointer hover:font-bold' href='/coaching'>Coaching</A>
-                        <A className='cursor-pointer hover:font-bold' href='/om-mig'>Om mig</A>
+                    </A>
+                    <div className="hidden md:flex space-x-4">
+                        <SoMeButton />
                     </div>
                 </div>
 
-                
+                {/* Center Section (Shows Logo and Navigation on Desktop) */}
+                <div className="hidden md:flex flex-col items-center w-full px-[20px]">
+                    <A href="/">
+                        <H1>Forstå Alt</H1>
+                    </A>
+                    <div className="flex flex-row text-[15px] gap-4">
+                        <A className="cursor-pointer hover:font-bold" href="/services">Services</A>
+                        <A className="cursor-pointer hover:font-bold" href="/coaching">Coaching</A>
+                        <A className="cursor-pointer hover:font-bold" href="/om-mig">Om mig</A>
+                    </div>
+                </div>
 
-                <button className="z-1000 max-[768px]:collapse" onClick={() => console.error("not implemented")}>Kontakt mig</button>
+                {/* Right Section */}
+                <div className="flex justify-end">
+                    <A href="/om-mig">
+                        <button className="hidden md:block">Kontakt mig</button>
+                    </A>
+                </div>
+
+                {/* Collapsible Menu (Visible Only on Mobile) */}
+                <div className="md:hidden flex justify-end w-full">
+                    <CollapseableMenu>
+                        <CollapseableMenuItem isFirst={true}>
+                            <A className="cursor-pointer hover:font-bold" href="/services">Services</A>
+                        </CollapseableMenuItem>
+                        <CollapseableMenuItem>
+                            <A className="cursor-pointer hover:font-bold" href="/coaching">Coaching</A>
+                        </CollapseableMenuItem>
+                        <CollapseableMenuItem>
+                            <A className="cursor-pointer hover:font-bold" href="/om-mig">Om mig</A>
+                        </CollapseableMenuItem>
+                    </CollapseableMenu>
+                </div>
             </SubHeader>
+
+
             <SubHeader className={cn("relative flex", className)}> {children} </SubHeader>
 
-            <CollapseableMenu className="absolute min-[768px]:collapse -translate-y-5.5 w-full">
-                <CollapseableMenuItem isFirst={true}>
-                    <A className='cursor-pointer hover:font-bold' href='/services'>Services</A>
-                </CollapseableMenuItem>
-                <CollapseableMenuItem>
-                    <A className='cursor-pointer hover:font-bold' href='/coaching'>Coaching</A>
-                </CollapseableMenuItem>
-                <CollapseableMenuItem>
-                    <A className='cursor-pointer hover:font-bold' href='/om-mig'>Om mig</A>
-                </CollapseableMenuItem>
-            </CollapseableMenu>
+            
         </header>
     )
 }

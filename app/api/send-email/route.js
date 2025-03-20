@@ -22,9 +22,13 @@ export async function POST(req) {
   // Set up email data
   let mailOptions = {
     from: email, // The sender's email
-    to: process.env.EMAIL_USER, // Your email address where you want to receive messages
-    subject: `Message from ${name}`, // Subject of the email
-    text: message, // The message content
+    to: process.env.EMAIL_ADMIN, // Your email address where you want to receive messages
+    subject: `${name} har sendt dig en besked fra forstå alt`, // Subject of the email
+    text: `
+    navn : ${name}
+    email : ${email}
+    besked :
+    ${message}`, // The message content
   };
 
   try {
