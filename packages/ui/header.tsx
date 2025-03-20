@@ -2,7 +2,7 @@ import { A, H1 } from "../ui/typography"
 import { cn } from "../ui/utils"
 import { CollapseableMenu, CollapseableMenuItem } from "../components/collapseableMenu"
 import SoMeButton from "../components/SoMeButton"
-import { Mail, Send } from "lucide-react"
+import { Mail } from "lucide-react"
 
 type HeaderProps = {
   children? : React.ReactNode
@@ -37,9 +37,11 @@ export const Header = ({children, className} : HeaderProps) => {
                 {/* Right Section */}
                 <div className="flex justify-end">
                     <A href="/om-mig">
-                        <button className='items-center justify-center flex flex-row gap-3 self-center mt-10 font-bold'>
-                            <Mail />
-                            Kontakt Mig
+                        <button className="hidden md:block">
+                            <div className="flex flex-row gap-3 align-center justify-center">
+                                <Mail />
+                                Kontakt mig
+                            </div>
                         </button>
                     </A>
                 </div>
