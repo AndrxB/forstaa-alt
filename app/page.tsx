@@ -13,7 +13,7 @@ export default function Home() {
       </Header>
       
       <main className='relative flex flex-col mt-50 h-screen mx-[20px] items-center gap-10'>
-        <Section >
+        <Section className='flex-col'>
           <H1 className='text-center text-clip'>{text.frontpage.threepillartitle}</H1>
           <Section3Col
 

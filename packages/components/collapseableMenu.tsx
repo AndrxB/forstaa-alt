@@ -3,7 +3,7 @@ import { cn } from "../ui/utils";
 import Image from 'next/image'
 import bars from '@/packages/assets/bars-staggered.png'
 import { Divider } from "../ui/divider";
-import { A } from "../ui/typography";
+import { A, H1 } from "../ui/typography";
 
 type CollapseableMenuProps = {
     title?: string;
@@ -33,9 +33,13 @@ export const CollapseableMenu = ({
             />
     
             {visible && 
-                <div className="absolute items-start justify-start p-[20px] w-full h-screen flex flex-col gap-5 bg-slate-800 top-0 left-0 z-50 -translate-y-9 translate-x-5">
+                <div className="absolute items-start justify-start p-[20px] w-full h-screen flex flex-col gap-5 top-0 left-0 z-50 -translate-y-9 translate-x-5" id="primary">
                     <div>
-                        <A className="text-[50px] cursor-pointer hover:font-bold" href="/">{title}</A>
+                        <A className="text-[50px] cursor-pointer hover:font-bold" href="/">
+                            <H1>
+                                {title}
+                            </H1>                        
+                        </A>
                         <Divider className="-translate-x-10 w-5/7"/>
                     </div>
                     <div className="flex flex-col items-center justify-center w-full gap-10 mt-20">
@@ -61,9 +65,9 @@ export const CollapseableMenuItem = ({
 }: CollapseableMenuItemProps) => {
     return(
         <div className={cn("flex flex-col w-full items-center", cn(className, `gap-${gap}`))}>
-            { isFirst && <Divider className="w-1/2"/> }
+            { isFirst && <Divider className="w-1/2 translate-x-0.5"/> }
             {children}
-            <Divider className="w-1/2"/>
+            <Divider className="w-1/2 translate-x-0.5"/>
         </div>
     )
 }

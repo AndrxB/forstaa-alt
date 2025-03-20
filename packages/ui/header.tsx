@@ -15,7 +15,9 @@ export const Header = ({children, className} : HeaderProps) => {
                     <div>link</div>
                 </div>
                 <div className='text-[50px] z-999 w-full items-center absolute left-1/2 -translate-y-10 -translate-x-1/2 flex flex-col max-[768px]:items-start px-[20px]'>
-                    <H1 href="/">Forstå Alt</H1> 
+                    <A href="/">
+                        <H1>Forstå Alt</H1>
+                    </A> 
                     <div className='flex flex-row text-[15px] w-1/2 justify-center gap-4 text-center max-[768px]:collapse'>
                         <A className='cursor-pointer hover:font-bold' href='/services'>Services</A>
                         <A className='cursor-pointer hover:font-bold' href='/coaching'>Coaching</A>

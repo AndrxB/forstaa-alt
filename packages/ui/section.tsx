@@ -13,6 +13,7 @@ type SectionProps = {
     className?: string;
     divider?: DividerProps;
     children?: React.ReactNode;
+    outerClassName?: string;
 }
 
 export const Section = ( { 
@@ -20,10 +21,11 @@ export const Section = ( {
     subtitle,
     divider, 
     className,
-    children 
+    children,
+    outerClassName
 } : SectionProps ) => {
     return (
-        <div className="relative flex flex-col gap-20 w-auto min-[1024px]:w-[1024px]">
+        <div className={cn("relative flex flex-col gap-20 w-auto min-[1024px]:w-[1024px]", outerClassName)}>
             <div className="gap-5 flex flex-col">
                 {divider?.position === "start" && <Divider className={divider.className}/>}
                 <div >
@@ -31,7 +33,7 @@ export const Section = ( {
                     <H5>{subtitle}</H5>
                 </div>
             </div>
-            <div className={cn("flex flex-col items-center justify-center", className)}>{children}</div>
+            <div className={cn("flex items-center justify-center", className)}>{children}</div>
             {divider?.position === "end" && <Divider className={divider.className}/>}
         </div>
     )
