@@ -2,7 +2,7 @@
 import { Header } from '@/packages/ui/header';
 import { H1, H2, H3, H4, H5 } from '@/packages/ui/typography';
 import text from '@/packages/json/text.json'
-import { Footer, Section, Section2Col, Section3Col } from '@/packages/ui/section';
+import { Footer, Main, Section, Section2Col, Section3Col } from '@/packages/ui/section';
 
 export default function Home() {
   return (
@@ -12,32 +12,29 @@ export default function Home() {
         <H3 className='text-[50px]'>i dit tempo</H3>
       </Header>
       
-      <main className='relative flex flex-col mt-50 h-screen mx-[20px] items-center gap-10'>
+      <Main >
         <Section className='flex-col'>
           <H1 className='text-center text-clip'>{text.frontpage.threepillartitle}</H1>
           <Section3Col
 
             className='flex flex-wrap justify-center gap-10 mt-10' 
             left = {
-              <div className='flex flex-col w-50 gap-10'>
+              <div className='flex flex-col w-50 gap-10 text-center'>
                 <h3 className='text-[25px]'>{text.frontpage.pillar1title1}</h3>
-                <span>{text.placeholders['1s']}</span>
-                {text.frontpage.pillar1}
+                <span>{text.frontpage.pillar1}</span>
               </div>
             }
             middle = {
-              <div className='flex flex-col w-50 gap-10'>
+              <div className='flex flex-col w-50 gap-10 text-center'>
                 <h3 className='text-[25px]'>{text.frontpage.pillar1title2}</h3>
-                <span>{text.placeholders['1s']}</span>
-                {text.frontpage.pillar2}
+                <span>{text.frontpage.pillar2}</span>
               </div>
             }
             
             right = {
-              <div className='flex flex-col w-50 gap-10'>
+              <div className='flex flex-col w-50 gap-10 text-center'>
                 <h3 className='text-[25px]'>{text.frontpage.pillar1title3}</h3>
-                <span>{text.placeholders['1s']}</span>
-                {text.frontpage.pillar3}
+                <span>{text.frontpage.pillar3}</span>
               </div>
             }
           />
@@ -72,8 +69,7 @@ export default function Home() {
             right={ <div className="p-2 rounded min-w-[400px] self-center min-h-[400px] drop-shadow-2xl my-10" id="foreground" /> }
           />
         </Section>
-        
-      </main>
+      </Main>
       
     </>
   )

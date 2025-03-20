@@ -4,8 +4,7 @@ import instagram from '@/packages/assets/instagram.svg'
 import facebook from '@/packages/assets/facebook.svg'
 
 
-export default function SoMeButton({ constraints } : { constraints?: string }) {
-    const imageSize = 35
+export default function SoMeButton({ constraints, size = 25 } : { constraints?: string, size?: number }) {
     const SoMes = {
         "Instagram" : {
             "SocialMedia" : "Instagram",
@@ -38,8 +37,8 @@ export default function SoMeButton({ constraints } : { constraints?: string }) {
                     <Image 
                         src={value.Icon} 
                         alt={value.SocialMedia} 
-                        width={imageSize} 
-                        height={imageSize} 
+                        width={size} 
+                        height={size} 
                     />
                 </a>
             ))}

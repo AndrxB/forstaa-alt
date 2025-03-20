@@ -1,7 +1,7 @@
 "use client"
 
 import { Header } from "@/packages/ui/header"
-import { Section, Section2Col } from "@/packages/ui/section"
+import { Main, Section, Section2Col } from "@/packages/ui/section"
 import { H1, H3 } from "@/packages/ui/typography"
 import text from '@/packages/json/aboutme.json'
 import Contact from "@/packages/components/contact"
@@ -11,7 +11,7 @@ export default function OmMig() {
         <>
             <Header />
 
-            <main className='relative flex flex-col mt-50 h-screen mx-[20px] items-center gap-20 mb-30'>
+            <Main>
                 <Section
                     divider={{position: "start"}}
                     title="Om mig"
@@ -25,7 +25,7 @@ export default function OmMig() {
                     </div>
                 </Section>
                 <Contact />
-            </main>
+            </Main>
         </>
     )
 }

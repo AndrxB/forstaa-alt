@@ -43,7 +43,7 @@ export const CollapseableMenu = ({
                         {children}
                     </div>
                     <div className="flex flex-row gap-3 absolute bottom-[20px] right-[20px]">
-                        <SoMeButton />
+                        <SoMeButton size={40}/>
                     </div>
                 </div>
             }

@@ -85,3 +85,15 @@ export const Footer = () => {
         </footer>
     )
 }
+
+type MainProps = {
+    className? : string;
+    children? : React.ReactNode;
+}
+export const Main = ({children, className}: MainProps) => {
+    return(
+        <main className={cn('relative flex flex-col my-50 h-screen mx-[20px] items-center gap-10', className)}>
+            {children}
+        </main>
+    )
+}

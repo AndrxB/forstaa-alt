@@ -1,0 +1,53 @@
+{
+    "hero": {
+        "title": "Lær at læse og forstå dansk som aldrig før",
+        "subtitle": "Er du træt af at stå fast, når du læser dansk?",
+        "content": "Hvis du føler, at du ofte mister tråden i tekster eller ikke kan forstå det, du læser, så er du ikke alene. Mange danskere, både unge og voksne, oplever den samme udfordring. \n\nJeg tilbyder personlig coaching, der er målrettet mod at hjælpe dig med at blive bedre til at læse og forstå dansk – på en måde, der giver mening for dig."
+    },
+    "reading": {
+        "title": "Hvad kan du forvente?",
+        "content": "Læseforståelse coaching handler om at gøre dig i stand til at forstå de tekster, du møder i din hverdag. Dette kan være alt fra artikler og bøger til dagligdags tekster. Jeg tilbyder en personlig og struktureret metode, hvor vi arbejder på at forstå de ord, grammatik og sætninger, der kan være svære at få greb om.",
+        "subtitle": "Hvordan fungerer det?",
+        "subcontent": "Vi arbejder med at finde de ord og sætninger, du har svært ved, og bruger både ordbøger, visuelle hjælpemidler og praktiske øvelser til at hjælpe dig med at forstå dem fuldt ud. Efterhånden som du lærer at mestre disse ord og udtryk, vil din generelle læseforståelse forbedres markant.",
+        "methods": {
+            "text": {
+                "title": "Find den rette tekst",
+                "content": "Vi starter med at vælge en tekst, der er passende for dit nuværende niveau."
+            },
+            "ressources": {
+                "title": "Brug af ordbøger og ressourcer",
+                "content": "Jeg hjælper dig med at finde de rigtige ordbøger og værktøjer til at slå ord op og forstå deres betydning."
+            },
+            "demonstration": {
+                "title": "Demonstration og visuel læring",
+                "content": "Vi bruger praktiske metoder, som f.eks. demonstrationer med objekter eller billeder, for at gøre betydningen af ordene lettere at forstå."
+            }
+        }
+    },
+    "coaching": {
+        "title": "Hvordan hjælper jeg dig?",
+        "subtitle": "Tidsramme",
+        "subcontent": "Du vil som regel kunne opnå mærkbare forbedringer efter 10 timers undervisning, fordelt over 5-6 uger. Dette giver dig tid til at øve dig, samt få feedback og justeringer på dine fremskridt.",
+        "content": {
+            "text": "For at gøre undervisningen mest effektiv for dig, er min coaching struktureret på en måde, der tilpasses dine behov",
+            "list": {
+                "consultation" : {
+                    "title": "Gratis indledende konsultation",
+                    "content": "Vi starter med en kort samtale, hvor vi vurderer dit nuværende niveau og dine specifikke udfordringer med læseforståelse."
+                },
+                "custom_lessons" : {
+                    "title": "Skræddersyet undervisning",
+                    "content": "Efter konsultationen får du en personlig undervisningsplan, der er tilpasset din læring og de områder, hvor du har brug for mest hjælp."
+                },
+                "flexible_sessions" : {
+                    "title": "Fleksible sessioner",
+                    "content": "Vi holder sessioner på 60 eller 90 minutter, og du kan vælge, om de skal være ugentlige eller efter behov."
+                },
+                "adjustments" : {
+                    "title": "Opfølgning og justering",
+                    "content": "Efter hver session evaluerer vi dine fremskridt og justerer undervisningen, så den altid passer til dit tempo og dine mål."
+                }
+            }
+        }
+    }
+}

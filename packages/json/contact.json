@@ -1,0 +1,15 @@
+{
+    "title": "Kontakt mig",
+    "content": "Er du interesseret? \n\nUdfyld formularen, så vender jeg tilbage til dig hurtigst muligt. Jeg ser frem til at høre fra dig!",
+    "submit_button": "Send Mail",
+    "placeholder": {
+        "name": "Dit Navn",
+        "email": "Din Email",
+        "message": "Din Besked"
+    },
+    "status": {
+        "success": "Beskeden blev sendt!",
+        "loading": "Sender beskeden...",
+        "error": "Der skete en fejl, prøv igen senere!"
+    }
+}
