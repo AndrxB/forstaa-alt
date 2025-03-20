@@ -1,8 +1,8 @@
 "use client"
 
 import { Header } from "@/packages/ui/header"
-import { Main, Section, Section2Col } from "@/packages/ui/section"
-import { H1, H3 } from "@/packages/ui/typography"
+import { Main, Section } from "@/packages/ui/section"
+import { H3 } from "@/packages/ui/typography"
 import text from '@/packages/json/aboutme.json'
 import Contact from "@/packages/components/contact"
 

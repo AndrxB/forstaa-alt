@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
-import { H1, H3, H5 } from '../ui/typography';
+import { H3 } from '../ui/typography';
 import text from '@/packages/json/contact.json'
 import { Mail, Send } from 'lucide-react';
 

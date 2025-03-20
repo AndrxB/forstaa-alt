@@ -1,13 +1,11 @@
 "use client"
 
-import Contact from "@/packages/components/contact"
 import { Header } from "@/packages/ui/header"
 import { Main, Section, Section2Col } from "@/packages/ui/section"
-import { H3, H4, H5 } from "@/packages/ui/typography"
+import { H3, H4, } from "@/packages/ui/typography"
 
 import text from '@/packages/json/coaching.json'
 import { ArrowRight } from "lucide-react"
-import { cn } from "@/packages/ui/utils"
 import AutoScrollCards from "@/packages/ui/coaching/card"
 import {Card} from "@/packages/ui/coaching/card"
 

@@ -1,8 +1,8 @@
 "use client";
 import { Header } from '@/packages/ui/header';
-import { H1, H2, H3, H4, H5 } from '@/packages/ui/typography';
+import { H1, H3, H4 } from '@/packages/ui/typography';
 import text from '@/packages/json/text.json'
-import { Footer, Main, Section, Section2Col, Section3Col } from '@/packages/ui/section';
+import { Main, Section, Section2Col, Section3Col } from '@/packages/ui/section';
 
 export default function Home() {
   return (
