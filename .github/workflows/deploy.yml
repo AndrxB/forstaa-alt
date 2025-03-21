@@ -12,29 +12,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code (for reference)
+      - name: Checkout code
         uses: actions/checkout@v3
 
-        # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
 
-      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build the React app
-      - name: Build the React app
+      - name: Build the Next.js app
         run: npm run build
 
+      - name: Export the Next.js app (for static sites)
+        run: npm run export  # This creates the 'out/' directory
+
+      # FTP Sync Step
       - name: Sync files to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: linux22.dandomain.dk
-          username: ${{ secrets.FTPUSERNAME }}
-          password: ${{ secrets.FTPPASSWORD }}
+          username: ${{ secrets.FTPUSERNAME }}  # Use the FTP username secret
+          password: ${{ secrets.FTPPASSWORD }}  # Use the FTP password secret
           protocol: ftps
           server-dir: www/  # Replace with your target directory on the server
-          local-dir: ./dist/  # This tells it to upload the artifact files
+          local-dir: ./out/  # Use 'out/' for static sites, not '.next/'
+
+      # If you need to pass other secrets (e.g., EMAIL secrets) to your app:
+      - name: Set up environment variables for email API
+        run: echo "EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }}" >> $GITHUB_ENV
+      - name: Set up email pass and user
+        run: |
+          echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> $GITHUB_ENV
+          echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" >> $GITHUB_ENV
