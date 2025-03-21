@@ -26,9 +26,6 @@ jobs:
       - name: Build the Next.js app
         run: npm run build
 
-      - name: Export the Next.js app (for static sites)
-        run: npm run export  # This creates the 'out/' directory
-
       # FTP Sync Step
       - name: Sync files to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
